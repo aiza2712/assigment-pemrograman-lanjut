@@ -53,11 +53,11 @@ int yearsOld(tm* inputTgl, tm* currentTgl)
 //*********************************************************************************************************************
 int monthsOld(tm* inputTgl, tm* currentTgl)
 {
-    int bulan = (currentTgl->tm_year - inputTgl->tm_year) * 12 + (currentTgl->tm_mon - inputTgl->tm_mon);
+    int month = (currentTgl->tm_year - inputTgl->tm_year) * 12 + (currentTgl->tm_mon - inputTgl->tm_mon);
     if (currentTgl->tm_mday < inputTgl->tm_mday) {
-        bulan--; // belum sampai tanggal lahir bulan ini
+        month--; // belum sampai tanggal lahir bulan ini
     }
-    return bulan;
+    return month;
 }
 //*********************************************************************************************************************
 string dayOfDate(tm* inputTgl)
