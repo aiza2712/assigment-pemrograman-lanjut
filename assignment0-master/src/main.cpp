@@ -9,6 +9,6 @@ int main(int argc, char ** argv) {
     cout << "what is your name??";
     getline (cin, name),
     cout << "hello, " << name << "!" << endl;
-    
+
     return 0;
 }
