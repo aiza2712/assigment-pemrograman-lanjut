@@ -8,8 +8,8 @@ output sesuai dengan format yg di minta
 example:
 ![compaile program](image.png)
 
-# year
-#
+## year
+
 ```
 int yearsOld(tm* inputTgl, tm* currentTgl)
 {
@@ -19,7 +19,7 @@ int yearsOld(tm* inputTgl, tm* currentTgl)
     }
     return year;
 }
-    ```
+ ```
 year di ambil menggunakan pointer ke tm '->', baik currentTgl maupun inputTgl udah ada di tm
 
 ```
@@ -41,7 +41,7 @@ tm inputTgl
 ```
 tm currentTgl yg menggunkan tanggal sekarang pointer di balikan.
 
-# month
+## month
 ```
 int monthsOld(tm* inputTgl, tm* currentTgl)
 {
@@ -54,4 +54,14 @@ int monthsOld(tm* inputTgl, tm* currentTgl)
 ```
 mekanisme nya sama dengan "year"
 
-# 
+## Day
+```
+string dayOfDate(tm* inputTgl)
+{
+    static const string hari[] = {"Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"};
+    tm temp = *inputTgl; 
+    mktime(&temp);      
+    return hari[temp.tm_wday];
+}
+```
+
