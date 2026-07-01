@@ -1,5 +1,4 @@
-main.d
+*.d
+myapp
 myapp.exe
-point2d.d
-obj/main.o
-obj/point2d.o
+obj/
